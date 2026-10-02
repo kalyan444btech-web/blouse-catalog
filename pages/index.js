@@ -2,30 +2,24 @@ import { useState } from "react";
 
 export default function Home() {
   const products = [
-    { name: "Black cotton Padded", price: 300 },
-    { name: "Black space silk Padded", price: 400 },
-    { name: "Blue Cotton heluci", price: 350 },
-    { name: "Cotton Black Embroidery", price: 500 },
-    { name: "Cotton Red & white", price: 250 },
-    { name: "Green Chikinkari", price: 400 },
-    { name: "Mustard embroidery Blouse", price: 550 },
-    { name: "Pink space silk padded", price: 400 },
-    { name: "Purple cotton padded", price: 300 },
-    { name: "Red space Silk Padded", price: 400 },
-    { name: "White Maggam", price: 500 },
-    { name: "Yellow Cotton", price: 250 }
+    {
+      name: "Black cotton Padded",
+      price: 300,
+      image:
+        "https://drive.google.com/thumbnail?id=1hR6gNwW4s508RzN4N5tJuTZJKTsoJkIw&sz=w1000"
+    }
   ];
 
   const [search, setSearch] = useState("");
 
-  const filtered = products.filter((p) =>
-    p.name.toLowerCase().includes(search.toLowerCase())
+  const filteredProducts = products.filter((product) =>
+    product.name.toLowerCase().includes(search.toLowerCase())
   );
 
   return (
     <div
       style={{
-        background: "#f5f5f5",
+        backgroundColor: "#f5f5f5",
         minHeight: "100vh",
         padding: "20px",
         fontFamily: "Arial, sans-serif"
@@ -41,6 +35,7 @@ export default function Home() {
       </h1>
 
       <input
+        type="text"
         placeholder="Search Products..."
         value={search}
         onChange={(e) => setSearch(e.target.value)}
@@ -54,63 +49,52 @@ export default function Home() {
         }}
       />
 
-      <div
-        style={{
-          display: "grid",
-          gap: "15px"
-        }}
-      >
-        {filtered.map((product) => (
-          <div
-            key={product.name}
+      {filteredProducts.map((product) => (
+        <div
+          key={product.name}
+          style={{
+            backgroundColor: "#ffffff",
+            borderRadius: "15px",
+            padding: "15px",
+            marginBottom: "20px",
+            boxShadow: "0 3px 10px rgba(0,0,0,0.15)"
+          }}
+        >
+          {product.image}
+
+          <h2>{product.name}</h2>
+
+          <p
             style={{
-              background: "#fff",
-              borderRadius: "15px",
-              padding: "15px",
-              boxShadow: "0 2px 10px rgba(0,0,0,0.1)"
+              color: "#d63384",
+              fontWeight: "bold",
+              fontSize: "20px"
             }}
           >
-            <div
-              style={{
-                height: "180px",
-                background: "#ececec",
-                borderRadius: "10px",
-                marginBottom: "10px",
-                display: "flex",
-                justifyContent: "center",
-                alignItems: "center"
-              }}
-            >
-              Product Image
-            </div>
+            ₹{product.price}
+          </p>
 
-            <h3>{product.name}</h3>
-
-            <p
-              style={{
-                color: "#d63384",
-                fontWeight: "bold",
-                fontSize: "18px"
-              }}
-            >
-              ₹{product.price}
-            </p>
-
-            <button
-              style={{
-                background: "#25D366",
-                color: "white",
-                border: "none",
-                padding: "10px",
-                borderRadius: "8px",
-                width: "100%"
-              }}
-            >
-              Enquire on WhatsApp
-            </button>
-          </div>
-        ))}
-      </div>
+          <button
+            onClick={() =>
+              window.open(
+                `https://wa.me/919999999999?text=Hi, I am interested in ${product.name}`,
+                "_blank"
+              )
+            }
+            style={{
+              width: "100%",
+              padding: "12px",
+              backgroundColor: "#25D366",
+              color: "white",
+              border: "none",
+              borderRadius: "10px",
+              fontSize: "16px"
+            }}
+          >
+            WhatsApp Enquiry
+          </button>
+        </div>
+      ))}
     </div>
   );
 }
