@@ -1,3 +1,5 @@
+import { useState } from "react";
+
 export default function Home() {
   const products = [
     { name: "Black cotton Padded", price: 300 },
@@ -14,18 +16,35 @@ export default function Home() {
     { name: "Yellow Cotton", price: 250 }
   ];
 
+  const [search, setSearch] = useState("");
+
+  const filtered = products.filter((p) =>
+    p.name.toLowerCase().includes(search.toLowerCase())
+  );
+
   return (
-    <div style={{ padding: "20px", fontFamily: "Arial" }}>
+    <div style={{ padding: 20 }}>
       <h1>Boutique Collection</h1>
 
-      {products.map((product) => (
+      <input
+        placeholder="Search products..."
+        value={search}
+        onChange={(e) => setSearch(e.target.value)}
+        style={{
+          width: "100%",
+          padding: 10,
+          marginBottom: 20
+        }}
+      />
+
+      {filtered.map((product) => (
         <div
           key={product.name}
           style={{
             border: "1px solid #ddd",
-            borderRadius: "10px",
-            padding: "15px",
-            marginBottom: "10px"
+            borderRadius: 10,
+            padding: 15,
+            marginBottom: 15
           }}
         >
           <h3>{product.name}</h3>
@@ -35,3 +54,4 @@ export default function Home() {
     </div>
   );
 }
+`
