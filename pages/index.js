@@ -18,40 +18,46 @@ export default function Home() {
 
   const [search, setSearch] = useState("");
 
-  const filtered = products.filter((p) =>
+  const filteredProducts = products.filter((p) =>
     p.name.toLowerCase().includes(search.toLowerCase())
   );
 
   return (
-    <div style={{ padding: 20 }}>
-      <h1>Boutique Collection</h1>
+    <div style={{ padding: "20px", fontFamily: "Arial" }}>
+      <h1>🛍️ Boutique Collection</h1>
 
       <input
+        type="text"
         placeholder="Search products..."
         value={search}
         onChange={(e) => setSearch(e.target.value)}
         style={{
           width: "100%",
-          padding: 10,
-          marginBottom: 20
+          padding: "12px",
+          borderRadius: "8px",
+          border: "1px solid #ddd",
+          marginBottom: "20px"
         }}
       />
 
-      {filtered.map((product) => (
+      {filteredProducts.map((product) => (
         <div
           key={product.name}
           style={{
             border: "1px solid #ddd",
-            borderRadius: 10,
-            padding: 15,
-            marginBottom: 15
+            borderRadius: "10px",
+            padding: "15px",
+            marginBottom: "15px",
+            backgroundColor: "#fafafa"
           }}
         >
           <h3>{product.name}</h3>
-          <p>₹{product.price}</p>
+
+          <p>
+            <strong>₹{product.price}</strong>
+          </p>
         </div>
       ))}
     </div>
   );
 }
-`
