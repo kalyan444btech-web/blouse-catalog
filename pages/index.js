@@ -17,177 +17,59 @@ const products = [
 
 export default function Home() {
   const [search, setSearch] = useState("");
-  const [selected, setSelected] = useState(null);
 
-  const filteredProducts = products.filter((p) =>
+  const filtered = products.filter((p) =>
     p.name.toLowerCase().includes(search.toLowerCase())
   );
 
   return (
-    <div
-      style={{
-        backgroundColor: "#f4f4f4",
-        minHeight: "100vh",
-        padding: "20px",
-        fontFamily: "Arial, sans-serif"
-      }}
-    >
-      <h1
-        style={{
-          textAlign: "center",
-          marginBottom: "20px"
-        }}
-      >
-        Boutique Collection
-      </h1>
+    <div style={{ padding: "20px", fontFamily: "Arial" }}>
+      <h1>Boutique Collection</h1>
 
       <input
         type="text"
-        placeholder="Search products..."
+        placeholder="Search..."
         value={search}
         onChange={(e) => setSearch(e.target.value)}
         style={{
           width: "100%",
-          padding: "12px",
-          borderRadius: "10px",
-          border: "1px solid #ddd",
+          padding: "10px",
           marginBottom: "20px"
         }}
       />
 
-      <div
-        style={{
-          display: "grid",
-          gridTemplateColumns: "repeat(auto-fit,minmax(250px,1fr))",
-          gap: "20px"
-        }}
-      >
-        {filteredProducts.map((product) => (
-          <div
-            key={product.id}
-            style={{
-              backgroundColor: "#fff",
-              borderRadius: "12px",
-              padding: "15px",
-              boxShadow: "0 2px 8px rgba(0,0,0,0.1)"
-            }}
-          >
-            <div
-              style={{
-                height: "220px",
-                backgroundColor: "#eaeaea",
-                borderRadius: "10px",
-                display: "flex",
-                alignItems: "center",
-                justifyContent: "center",
-                marginBottom: "10px"
-              }}
-            >
-              Image Here
-            </div>
-
-            <h3>{product.name}</h3>
-
-            <p
-              style={{
-                color: "#d63384",
-                fontWeight: "bold",
-                fontSize: "18px"
-              }}
-            >
-              ₹{product.price}
-            </p>
-
-            <button
-              onClick={() => setSelected(product)}
-              style={{
-                width: "100%",
-                padding: "10px",
-                backgroundColor: "#111",
-                color: "#fff",
-                border: "none",
-                borderRadius: "8px",
-                cursor: "pointer"
-              }}
-            >
-              View Details
-            </button>
-          </div>
-        ))}
-      </div>
-
-      {selected && (
+      {filtered.map((product) => (
         <div
-          onClick={() => setSelected(null)}
+          key={product.id}
           style={{
-            position: "fixed",
-            top: 0,
-            left: 0,
-            right: 0,
-            bottom: 0,
-            background: "rgba(0,0,0,0.6)",
-            display: "flex",
-            justifyContent: "center",
-            alignItems: "center",
-            padding: "20px"
+            border: "1px solid #ddd",
+            padding: "15px",
+            marginBottom: "15px",
+            borderRadius: "8px"
           }}
         >
-          <div
-            onClick={(e) => e.stopPropagation()}
-            style={{
-              backgroundColor: "#fff",
-              padding: "20px",
-              borderRadius: "12px",
-              width: "100%",
-              maxWidth: "450px"
-            }}
-          >
-            <h2>{selected.name}</h2>
+          <h3>{product.name}</h3>
 
-            <p
-              style={{
-                fontSize: "22px",
-                fontWeight: "bold"
-              }}
-            >
-              ₹{selected.price}
-            </p>
+          <p>
+            <strong>₹{product.price}</strong>
+          </p>
 
-            {`https://wa.me/919876543210?text=Hi,%20I%20am%20interested%20in%20${encodeURIComponent(}`}
-              target="_blank"
-              rel="noreferrer"
-            >
-              <button
-                style={{
-                  width: "100%",
-                  padding: "12px",
-                  backgroundColor: "#25D366",
-                  color: "#fff",
-                  border: "none",
-                  borderRadius: "8px",
-                  cursor: "pointer"
-                }}
-              >
-                WhatsApp Enquiry
-              </button>
-            </a>
-
+          <a
+    ://wa.me/919876543210?text=Hi%20I%20am%20interested%20in%20${encodeURIComponent(product.name)}`}
             <button
-              onClick={() => setSelected(null)}
               style={{
-                width: "100%",
-                marginTop: "10px",
-                padding: "12px",
-                borderRadius: "8px",
-                border: "1px solid #ddd",
-                cursor: "pointer"
+                background: "#25D366",
+                color: "white",
+                border: "none",
+                padding: "10px",
+                borderRadius: "5px"
               }}
             >
-              Close
+              WhatsApp Enquiry
             </button>
-          </div>
+          </a>
         </div>
-      )}
+      ))}
     </div>
   );
 }
