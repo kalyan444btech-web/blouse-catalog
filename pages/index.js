@@ -1,64 +1,8 @@
-import { useState } from "react";
-
-const products = [
-  { name: "Black cotton Padded", price: 300 },
-  { name: "Black space silk Padded", price: 400 },
-  { name: "Blue Cotton heluci", price: 350 },
-  { name: "Cotton Black Embroidery", price: 500 },
-  { name: "Cotton Red & white", price: 250 },
-  { name: "Green Chikinkari", price: 400 },
-  { name: "Mustard embroidery Blouse", price: 550 },
-  { name: "Pink space silk padded", price: 400 },
-  { name: "Purple cotton padded", price: 300 },
-  { name: "Red space Silk Padded", price: 400 },
-  { name: "White Maggam", price: 500 },
-  { name: "Yellow Cotton", price: 250 }
-];
-
 export default function Home() {
-  const [search, setSearch] = useState("");
-
-  const filteredProducts = products.filter((p) =>
-    p.name.toLowerCase().includes(search.toLowerCase())
-  );
-
-  return (
-    <div style={{ padding: 20, maxWidth: 800, margin: "auto" }}>
-      <h1>Blouse Collection</h1>
-
-      <input
-        type="text"
-        placeholder="Search products..."
-        value={search}
-        onChange={(e) => setSearch(e.target.value)}
-        style={{
-          width: "100%",
-          padding: "10px",
-          marginBottom: "20px"
-        }}
-      />
-
-      {filteredProducts.map((product) => (
-        <div
-          key={product.name}
-          style={{
-            border: "1px solid #ddd",
-            borderRadius: "10px",
-            padding: "15px",
-            marginBottom: "15px"
-          }}
-        >
-          <h3>{product.name}</h3>
-
-          <p>
-            <strong>₹{product.price}</strong>
-          </p>
-
-          {`https://wa.me/917093603990?text=Hi,
-            WhatsApp Enquiry
-          </a>
-        </div>
-      ))}
-    </div>
-  );
+return (
+<div>
+<h1>Blouse Collection</h1>
+<p>Website is working!</p>
+</div>
+);
 }
