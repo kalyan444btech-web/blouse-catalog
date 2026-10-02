@@ -6,7 +6,25 @@ export default function Home() {
       name: "Black cotton Padded",
       price: 300,
       image:
-        "https://drive.google.com/thumbnail?id=1hR6gNwW4s508RzN4N5tJuTZJKTsoJkIw&sz=w1000"
+        "https://drive.google.com/uc?export=view&id=1JEMSU5MuIn4foq67ya03UMFvK0GT4dDf"
+    },
+    {
+      name: "Pink space silk padded",
+      price: 400,
+      image:
+        "https://drive.google.com/uc?export=view&id=1m2Pydi_q7_xXQVb5vTQd38KVqs8w9g98"
+    },
+    {
+      name: "Red space Silk Padded",
+      price: 400,
+      image:
+        "https://drive.google.com/uc?export=view&id=1SphFh_3-hdDH8oDvFleJxreUrVNgPaQn"
+    },
+    {
+      name: "Yellow Cotton",
+      price: 250,
+      image:
+        "https://drive.google.com/uc?export=view&id=1lSluF3ywJE4x0pFX5I-mFoQ7udqv1iqY"
     }
   ];
 
@@ -22,7 +40,7 @@ export default function Home() {
         backgroundColor: "#f5f5f5",
         minHeight: "100vh",
         padding: "20px",
-        fontFamily: "Arial, sans-serif"
+        fontFamily: "Arial"
       }}
     >
       <h1
@@ -31,7 +49,7 @@ export default function Home() {
           color: "#d63384"
         }}
       >
-        🌸 Boutique Collection
+        Boutique Collection
       </h1>
 
       <input
@@ -42,9 +60,9 @@ export default function Home() {
         style={{
           width: "100%",
           padding: "12px",
+          marginBottom: "20px",
           borderRadius: "10px",
           border: "1px solid #ddd",
-          marginBottom: "20px",
           boxSizing: "border-box"
         }}
       />
@@ -53,20 +71,18 @@ export default function Home() {
         <div
           key={product.name}
           style={{
-            backgroundColor: "#ffffff",
+            backgroundColor: "white",
             borderRadius: "15px",
             padding: "15px",
             marginBottom: "20px",
-            boxShadow: "0 3px 10px rgba(0,0,0,0.15)"
+            boxShadow: "0 2px 10px rgba(0,0,0,0.1)"
           }}
         >
-          {product.image}
-
-          <h2>{product.name}</h2>
-
-          <p
+          <img
+            src={product.image}
+            alt={product.name}
             style={{
-              color: "#d63384",
+              width#d63384",
               fontWeight: "bold",
               fontSize: "20px"
             }}
