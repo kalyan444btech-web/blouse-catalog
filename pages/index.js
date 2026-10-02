@@ -23,34 +23,18 @@ export default function Home() {
   );
 
   return (
-    <div
-      style={{
-        backgroundColor: "#f5f5f5",
-        minHeight: "100vh",
-        padding: "20px",
-        fontFamily: "Arial, sans-serif"
-      }}
-    >
-      <h1
-        style={{
-          textAlign: "center",
-          color: "#c2185b"
-        }}
-      >
-        🌸 Boutique Collection
-      </h1>
+    <div style={{ padding: 20 }}>
+      <h1>Boutique Collection</h1>
 
       <input
-        placeholder="Search Product..."
+        type="text"
+        placeholder="Search"
         value={search}
         onChange={(e) => setSearch(e.target.value)}
         style={{
           width: "100%",
-          padding: "12px",
-          borderRadius: "10px",
-          border: "1px solid #ddd",
-          marginBottom: "20px",
-          boxSizing: "border-box"
+          padding: 10,
+          marginBottom: 20
         }}
       />
 
@@ -58,44 +42,25 @@ export default function Home() {
         <div
           key={product.name}
           style={{
-            background: "white",
-            borderRadius: "15px",
-            padding: "15px",
-            marginBottom: "20px",
-            boxShadow: "0 4px 10px rgba(0,0,0,0.1)"
+            border: "1px solid #ddd",
+            padding: 15,
+            marginBottom: 20,
+            borderRadius: 10
           }}
         >
           {product.image}
 
           <h2>{product.name}</h2>
 
-          <p
-            style={{
-              color: "#c2185b",
-              fontWeight: "bold",
-              fontSize: "22px"
-            }}
-          >
-            ₹{product.price}
-          </p>
+          <p>₹{product.price}</p>
 
           <button
             onClick={() =>
               window.open(
-                `https://wa.me/919999999999?text=Hi, I am interested in ${product.name}`,
+                "https://wa.me/919999999999",
                 "_blank"
               )
             }
-            style={{
-              width: "100%",
-              padding: "12px",
-              background: "#25D366",
-              color: "white",
-              border: "none",
-              borderRadius: "10px",
-              fontSize: "16px",
-              cursor: "pointer"
-            }}
           >
             WhatsApp Enquiry
           </button>
