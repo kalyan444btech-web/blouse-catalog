@@ -37,7 +37,10 @@ export default function Home() {
       {/* Black Cotton Padded */}
       <div style={{ background: "white", padding: "15px", borderRadius: "15px", marginBottom: "20px" }}>
         <img
-          src="https://mnsphapvkqgspaqoqdis.supabase.co/storage/v1/object/public/products/blouses/Cotton_black_embroidery_front.jpeg"/>
+          src="https://mnsphapvkqgspaqoqdis.supabase.co/storage/v1/object/public/products/blouses/Cotton_black_embroidery_front.jpeg"
+          alt="Black Space Silk Padded"
+          width="300"
+        />
         <h2>Black Cotton Padded</h2>
         <p>₹300</p>
       </div>
@@ -45,7 +48,10 @@ export default function Home() {
       {/* Blue Cotton Heluci */}
       <div style={{ background: "white", padding: "15px", borderRadius: "15px", marginBottom: "20px" }}>
       <img
-          src="https://mnsphapvkqgspaqoqdis.supabase.co/storage/v1/object/public/products/blouses/Cotton_blue_heluci_front.jpeg"/>
+          src="https://mnsphapvkqgspaqoqdis.supabase.co/storage/v1/object/public/products/blouses/Cotton_blue_heluci_front.jpeg"
+          alt="Black Space Silk Padded"
+          width="300"
+        />
         <h2>Blue Cotton Heluci</h2>
         <p>₹350</p>
       </div>
@@ -64,7 +70,10 @@ export default function Home() {
       {/* Cotton Red White */}
       <div style={{ background: "white", padding: "15px", borderRadius: "15px", marginBottom: "20px" }}>
         <img
-          src="https://mnsphapvkqgspaqoqdis.supabase.co/storage/v1/object/public/products/blouses/Cotton_red_front.jpeg"/>
+          src="https://mnsphapvkqgspaqoqdis.supabase.co/storage/v1/object/public/products/blouses/Cotton_red_front.jpeg"
+          alt="Black Space Silk Padded"
+          width="300"
+        />
         <h2>Cotton Red White</h2>
         <p>₹250</p>
       </div>
@@ -72,7 +81,10 @@ export default function Home() {
       {/* Yellow Cotton */}
       <div style={{ background: "white", padding: "15px", borderRadius: "15px", marginBottom: "20px" }}>
         <img
-          src="https://mnsphapvkqgspaqoqdis.supabase.co/storage/v1/object/public/products/blouses/cotton_yellow_front.jpeg"/>
+          src="https://mnsphapvkqgspaqoqdis.supabase.co/storage/v1/object/public/products/blouses/cotton_yellow_front.jpeg"
+          alt="Black Space Silk Padded"
+          width="300"
+        />
         <h2>Yellow Cotton</h2>
         <p>₹250</p>
       </div>
@@ -80,7 +92,10 @@ export default function Home() {
       {/* Green Chikinkari */}
       <div style={{ background: "white", padding: "15px", borderRadius: "15px", marginBottom: "20px" }}>
         <img
-          src="https://mnsphapvkqgspaqoqdis.supabase.co/storage/v1/object/public/products/blouses/green_chikinkari_front.jpeg"/>
+          src="https://mnsphapvkqgspaqoqdis.supabase.co/storage/v1/object/public/products/blouses/green_chikinkari_front.jpeg"
+          alt="Black Space Silk Padded"
+          width="300"
+        />
         <h2>Green Chikinkari</h2>
         <p>₹400</p>
       </div>
@@ -88,7 +103,10 @@ export default function Home() {
       {/* Mustard Cotton Embroidery */}
       <div style={{ background: "white", padding: "15px", borderRadius: "15px", marginBottom: "20px" }}>
         <img
-          src="https://mnsphapvkqgspaqoqdis.supabase.co/storage/v1/object/public/products/blouses/Mustard_cotton_embroidery_front.jpeg"/>
+          src="https://mnsphapvkqgspaqoqdis.supabase.co/storage/v1/object/public/products/blouses/Mustard_cotton_embroidery_front.jpeg"
+          alt="Black Space Silk Padded"
+          width="300"
+        />
         <h2>Mustard Cotton Embroidery</h2>
         <p>₹550</p>
       </div>
@@ -96,7 +114,10 @@ export default function Home() {
       {/* Pink Space Silk Padded */}
       <div style={{ background: "white", padding: "15px", borderRadius: "15px", marginBottom: "20px" }}>
         <img
-          src="https://mnsphapvkqgspaqoqdis.supabase.co/storage/v1/object/public/products/blouses/pink_space_silk_padded_front.jpeg"/>
+          src="https://mnsphapvkqgspaqoqdis.supabase.co/storage/v1/object/public/products/blouses/pink_space_silk_padded_front.jpeg"
+          alt="Black Space Silk Padded"
+          width="300"
+        />
         <h2>Pink Space Silk Padded</h2>
         <p>₹400</p>
       </div>
@@ -104,7 +125,10 @@ export default function Home() {
       {/* Red Space Silk Padded */}
       <div style={{ background: "white", padding: "15px", borderRadius: "15px", marginBottom: "20px" }}>
         <img
-          src="https://mnsphapvkqgspaqoqdis.supabase.co/storage/v1/object/public/products/blouses/red_space_silk_padded_front.jpeg"/>
+          src="https://mnsphapvkqgspaqoqdis.supabase.co/storage/v1/object/public/products/blouses/red_space_silk_padded_front.jpeg"
+          alt="Black Space Silk Padded"
+          width="300"
+        />
         <h2>Red Space Silk Padded</h2>
         <p>₹400</p>
       </div>
@@ -112,7 +136,10 @@ export default function Home() {
       {/* White Maggam */}
       <div style={{ background: "white", padding: "15px", borderRadius: "15px", marginBottom: "20px" }}>
         <img
-          src="https://mnsphapvkqgspaqoqdis.supabase.co/storage/v1/object/public/products/blouses/white_maggam_padded_front.jpeg"/>
+          src="https://mnsphapvkqgspaqoqdis.supabase.co/storage/v1/object/public/products/blouses/white_maggam_padded_front.jpeg"
+          alt="Black Space Silk Padded"
+          width="300"
+        />
         <h2>White Maggam</h2>
         <p>₹500</p>
       </div>
